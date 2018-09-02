@@ -1,0 +1,36 @@
+<html>
+<head>
+<style type="text/css">
+ .menu DIV {
+  float: left;			/* Состыковка с соседней вкладкой */
+  width: 151px;			/* Ширина вкладки */
+  height: 40px;			/* Высота вкладки */
+  margin-right: 10px;		/* Расстояние между вкладками */
+  text-align: center;		/* Выровнять надпись по центру */
+  background:
+   url(green_orange.jpg)	/* Путь к совместному рисунку */
+   no-repeat			/* Установить фон без повторений */
+}
+ .menu A {
+  display: block;		/* Ссылка как блочный элемент */
+  width: 100%;			/* Ссылка на всю ширину вкладки */
+  height: 100%;			/* Ссылка на всю высоту вкладки */
+  padding: 12px 0px		/* Поля для размещения текста по центру */
+}
+ .menu A:hover {
+  background:
+   url(green_orange.jpg)	/* Путь к совместному рисунку */
+   -151px			/* Сдвигаем фон влево */
+   0px				/* По вертикали оставляем на месте */
+   no-repeat			/* Отображать фон без повторений */
+}
+</style>
+</head>
+<body>
+ <div class=menu>
+  <div><a href=link1.html>Чебурашка</a></div>
+  <div><a href=link2.html>Крокодил Гена</a></div>
+  <div><a href=link3.html>Шапокляк</a></div>
+ </div>
+</body>
+</html>

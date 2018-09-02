@@ -1,0 +1,21 @@
+<html>
+<head>
+<style>
+ .radiobutton {
+  color: red;				/* Цвет маркера */
+  background: #ccc;			/* Цвет фона под переключателем */
+  border: 1px dashed black; 		/* Параметры рамки */
+  margin: 2px				/* Отступы вокруг элемента */
+}
+</style>
+</head>
+<body> 
+ <form action=/cgi-bin/handler.cgi>
+  <b>Какое у вас состояние разума?</b><br>
+  <input name=dzen type=radio class=radiobutton> Не дзен<br>
+  <input name=dzen type=radio class=radiobutton> Дзен<br>
+  <input name=dzen type=radio class=radiobutton> Полный дзен
+  <p><input type=submit value="Выбрать">
+ </form> 
+</body>
+</html>

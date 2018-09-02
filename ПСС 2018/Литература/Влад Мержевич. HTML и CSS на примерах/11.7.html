@@ -1,0 +1,31 @@
+<html>
+<title>Текстовые вкладки</title>
+<head>
+<style type="text/css">
+ .tabs {
+  border-top: 1px solid black; 	/* Линия сверху вкладок */
+  padding-left: 20px		/* Отступ слева от вкладок */
+}
+ .tabs DIV {
+  padding: 0px 15px 3px;	/* Поле сверху, по горизонтали и снизу от текста */
+  border: 1px solid black;	/* Рамка для создания вкладки */
+  border-right: none;		/* Убираем линию справа */
+  display: inline		/* Превращаем блочные элементы во встроенные */
+}
+ .tabs .open { 
+  border-right: none;			/* Убираем линию справа */
+  border-top: 1px solid #cfd6d4;	/* Маскируем линию сверху */
+  background: #cfd6d4			/* Цвет фона текущей вкладки */
+}
+</style>
+</head>
+<body>
+<div style="background: #cfd6d4; height: 10px"></div>
+<div class=tabs>
+  <div><a href=link1.hml>Чебурашка</a></div>  
+  <div class=open>Крокодил Гена</div>  
+  <div><a href=link3.hml>Шапокляк</a></div>  
+  <div style="border-right: 1px solid black"><a href=link4.hml>Крыса Лариса</a></div>
+ </div>
+</body>
+</html>

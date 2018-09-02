@@ -1,0 +1,69 @@
+<html>
+<head>
+<style type="text/css">
+ TABLE.ruler {
+  width: 100%;			/* Ширина таблицы в процентах */
+  border: 1px solid navy	/* Рамка вокруг таблицы */
+}
+ TD {
+  padding: 4px			/* Поля вокруг содержимого ячеек */
+}
+ TR.line {			/* Стиль выделенной строки */
+  background: #fc0;		/* Фон под выделенной строкой */
+  color: #333			/* Цвет текста выделенной строки */
+}
+  .header {			/* Стиль заголовка */
+  background: navy; 	 	/* Цвет фона заголовка */
+  color: white         	/* Цвет текста в заголовке */
+}
+</style>
+<script language="JavaScript">
+function tableRuler() {
+
+// Проверяем, поддерживает ли текущий браузер DOM
+  if (document.getElementById) { 
+    tables = document.getElementsByTagName('table')
+// Пробегаемся по всем таблицам на странице
+    for (i=0;i<tables.length;i++) {
+
+// Работаем только с теми таблицами, 
+// у которых установлен класс с именем ruler
+      if (tables[i].className == 'ruler') { 
+        trs = tables[i].getElementsByTagName('tr')
+
+// Пробегаемся по всем строкам выбранной таблицы
+        for (j=0;j<trs.length;j++) {
+
+// Для заголовка таблицы цвет не меняем
+          if (trs[j].className != 'header') {
+
+// В остальных случаях изменяем имя стиля строки TR на line
+            trs[j].onmouseover = function() { this.className = 'line';  
+return false }
+            trs[j].onmouseout = function() { this.className = '';  
+return false }
+          }
+        }
+      }
+    }
+  }
+} 
+</script>
+</head>
+<body onLoad="tableRuler()">
+ <table class=ruler>
+  <tr class=header> 
+    <th>&nbsp;</th><th>2003</th><th>2004</th><th>2005</th>
+  </tr>
+  <tr> 
+    <td>Нефть</td><td>43</td><td>51</td><td>79</td>
+  </tr>
+  <tr> 
+    <td>Золото</td><td>29</td><td>34</td><td>48</td>
+  </tr>
+  <tr> 
+    <td>Дерево</td><td>38</td><td>57</td><td>36</td>
+  </tr>
+ </table>
+</body>
+</html>

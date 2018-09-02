@@ -1,0 +1,95 @@
+<html>
+<head>
+<script language="JavaScript">
+function floatMenu() {
+// Указывает, где находится меню по вертикали
+// Возможные варианты - top и bottom
+ verticalPos = "top"; // Меню находится вверху
+
+// Указывает, где находится меню по горизонтали
+// Возможные варианты - left и right
+ horizontalPos = "right"; // Меню располагается справа
+ startX = 10;	// Начальная координата по горизонтали
+ startY = 50;  // Начальная координата по вертикали
+
+ function coordMenu(id) {
+// Обращаемся к нашему меню по его id через getElementById
+  el = document.getElementById(id);
+
+// Получаем координаты меню
+  el.currentPosition = function(x, y) { 
+    if (horizontalPos == "left") this.style.left = x;
+    else  this.style.right = x;
+    this.style.top = y;
+  }
+
+// Положение по горизонтали остается неизменным 
+ el.x = startX;
+
+// Если меню расположено вверху окна, то вертикальная 
+// текущая координата не меняется
+  if (verticalPos == "top") el.y = startY;
+
+// Если меню расположено внизу окна, то из высоты окна вычитаем
+// исходную вертикальную координату меню
+  else el.y = document.body.clientHeight - startY;
+  return el;
+ }
+ slideMenu = function()	{
+// Число 20 в знаменателе определяет плавность хода,
+// чем оно больше, тем медленнее движется меню
+  if (verticalPos == "top")
+    obj.y += (document.body.scrollTop + startY - obj.y)/20;
+  else 
+    obj.y += (document.body.clientHeight + document.body.scrollTop -   startY - obj.y)/20;
+ 
+// Сохраняем текущие координаты меню
+  obj.currentPosition(obj.x, obj.y);
+
+// Вызываем функцию slideMenu каждые 10 миллисекунд
+  setTimeout("slideMenu()", 10);
+ }
+ obj = coordMenu("menu");
+ slideMenu();
+}
+</script>
+<style type="text/css">
+ #menu {
+  width: 150px; 			/* Ширина меню */
+  border: 1px solid navy;		/* Рамка вокруг меню */
+  background: #ffffee;			/* Цвет фона */
+  position: absolute			/* Абсолютное позиционирование */
+}
+ .title {
+  background: navy; 			/* Цвет фона под надписью */
+  color: white;				/* Цвет заголовка */
+  font-family: Arial, sans-serif; 	/* Рубленый шрифт */
+  font-weight: bold;			/* Жирное начертание */
+  font-size: 80%			/* Размер текста заголовка */
+}
+ .content A { 
+  border-bottom: 1px solid silver;	/* Линии между ссылками */
+  padding-bottom: 4px;			/* Расстояние от ссылки до линии под ней */
+  display: block			/* Ссылка на всю ширину меню */
+}
+ .title, .content { 
+  padding: 4px 				/* Поля вокруг ссылок и заголовка */
+}
+</style>
+</head>
+<body onLoad="floatMenu()">
+ <div id=menu>
+  <div class=title>Навигация по сайту</div>
+  <div class=content>
+    <a href=link1.html>Домой</a>
+    <a href=link2.html>Статьи</a>
+    <a href=link3.html>Форум</a>
+    <a href=link4.html>Помощь</a>
+  </div>
+ </div>
+<!-- Таблица для создания вертикальной полосы прокрутки -->
+ <table height=1000>
+  <tr><td>&nbsp;</td></tr>
+ </table>
+</body>
+</html>

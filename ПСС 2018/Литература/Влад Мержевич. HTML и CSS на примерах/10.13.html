@@ -1,0 +1,21 @@
+<html>
+<head>
+<style type="text/css">
+ H1 {
+  margin: 0px			/* Убираем отступы вокруг заголовка */
+}
+ DIV.shadow H1 {
+  position: relative;		/* Относительное позиционирование */
+  left: 5px;			/* Сдвиг тени вправо */
+  top: -1em;			/* Сдвиг тени вверх от исходного положения */
+  color: #ccc;			/* Цвет тени */
+  z-index: -1			/* Порядок слоя */
+}
+</style>
+</head>
+<body>
+ <h1>Чебурашка</h1>
+ <div class=shadow><h1>Чебурашка</h1></div>
+ ...
+</body>
+</html>

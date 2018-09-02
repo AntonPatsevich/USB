@@ -1,0 +1,33 @@
+<html>
+<head>
+<style type="text/css"> 
+ .column {
+  background: #800000;	/* Цвет фона левой колонки */
+  width: 100%		/* Суммарная ширина всех колонок */
+}
+ .col1 {
+  width: 200px;		/* Ширина левой колонки */
+  float: left;		/* Обтекание с правого края */
+  color: white		/* Цвет текста в левой колонке */
+}
+ .col2 {
+  background: #e0e0e0;		/* Цвет фона правой колонки */
+  margin-left: 200px		/* Сдвиг правого края на ширину первой колонки */
+}
+ P {
+  padding: 7px;			/* Поля вокруг текста */
+  margin: 0px			/* Отменяем отступы у параграфа */
+}
+</style>
+</head>
+<body>
+ <div class=column>
+  <div class=col1>
+    <p>Содержимое левой колонки</p>
+  </div>
+  <div class=col2>
+    <p>Содержимое правой колонки</p>
+  </div>
+ </div>
+</body>
+</html>

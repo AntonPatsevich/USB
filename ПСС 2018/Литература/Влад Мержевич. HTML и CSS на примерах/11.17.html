@@ -1,0 +1,120 @@
+<html>
+<head>
+<script language="JavaScript">
+function startMenu() {
+
+// Проверяем, поддерживает ли текущий браузер DOM
+ if (document.getElementById) {
+
+// Получаем объект с именем идентификатора menu
+   nav = document.getElementById('menu');
+
+// Пробегаемся по всем дочерним элементам нашего меню
+   for (i=0; i<nav.childNodes.length; i++) {
+     node = nav.childNodes[i];
+
+// Если дочерний элемент - LI, то идем дальше
+     if (node.nodeName == 'LI') {
+
+// При наведении курсора на пункт меню, присваиваем LI класс over
+       node.onmouseover = function() {
+         this.className = 'over';
+       }
+       node.onmouseout = function() {
+
+// При перемещении курсора за пределы пункта убираем класс over
+         this.className = '';
+       }
+     }
+   }
+ }
+}
+</script>
+<style type="text/css">
+ UL {
+  list-style: none;			/* Для списка убираем маркеры */
+  margin: 0px;				/* Нет отступов вокруг */
+  padding: 0px;				/* Убираем поля вокруг текста */
+  font-family: Arial, sans-serif;	/* Рубленый шрифт для текста меню */
+  font-size: 11pt			/* Размер текста в пункте меню */
+}
+ UL LI {
+  position: relative;		/* Подпункты позиционируются относительно */
+  background: white;		/* Цвет фона пунктов меню */
+  float: left;			/* Пункты первого уровня располагаются горизонтально */
+  padding: 4px 0px;		/* Поля вокруг пунктов первого уровня */
+  margin-right: 4px		/* Расстояние между пунктами по горизонтали */
+}
+ UL LI UL LI {
+ padding: 0px			/* Отменяем поля вокруг рамки пунктов меню второго уровня */
+}
+ LI UL {
+  position: absolute;		/* Подменю позиционируются абсолютно */
+  display: none;		/* Скрываем подменю */
+  width: 180px;			/* Ширина пунктов подменю */
+  margin-top: 3px		/* Сдвигаем подменю немного вниз */
+}
+* HTML LI UL {			/* Только для браузера Internet Explorer */
+  left: 0px;			/* Положение подменю по горизонтали */
+  top: 21px			/* Положение подменю по вертикали */
+}
+ LI A {
+  padding: 3px;		/* Поля вокруг надписей основного меню */
+  padding-left: 12px;		/* Добавляем отступ слева для рисунка */
+  text-decoration: none;	/* Подчеркивание у ссылок убираем */
+  color: #666;			/* Цвет текста */
+  border: 1px solid #ccc;	/* Рамка вокруг пунктов меню */
+  background: 			/* Для основных пунктов отображаем рисунок */
+	url(bullet2.gif) 	/* Указываем путь к рисунку со стрелкой */
+	left center 		/* Выравниваем рисунок по центру слева */
+	no-repeat		/* Отменяем повторение фона */
+}
+ LI UL LI A {
+  display: block;		/* Отображаем ссылку как блочный элемент */
+  padding: 4px;		/* Поля вокруг надписей подменю */
+  width: 180px;		/* Ширина пунктов подменю */
+  border-bottom: none;	/* Границу снизу не проводим */
+  background-image: none	/* Для подпунктов рисунок убираем */
+}
+ LI A:hover {
+  color: white;		/* Цвет текста активного пункта */
+  background-color: #666	/* Цвет фона активного пункта */
+}
+ LI:hover UL, LI.over UL { 
+  display: block		/* При выделении пункта курсором мыши 
+открывается подменю */
+}
+ .brd {
+  border-bottom: 1px solid #ccc	/* Добавляем линию снизу */
+}
+</style>
+</head>
+<body onLoad="startMenu()">
+ <ul id=menu>
+   <li><a href=russian.html>Русская кухня</a><ul> 
+     <li><a href=linkr1.html>Бефстроганов</a></li>
+     <li><a href=linkr2.html>Гусь с яблоками</a></li> 
+     <li><a href=linkr3.html>Крупеник новгородский</a></li> 
+     <li><a href=linkr4.html class=brd>Раки по-русски</a></li> 
+    </ul> 
+   </li> 
+   <li><a href=ukrainian.html>Украинская кухня</a><ul> 
+     <li><a href=linku1.html>Вареники</a></li> 
+     <li><a href=linku2.html>Жаркое по-харьковски</a></li> 
+     <li><a href=linku3.html>Капустняк черниговский</a></li> 
+     <li><a href=linku4.html class=brd>Потапцы с помидорами</a></li> 
+    </ul> 
+   </li>
+   <li><a href=caucasus.html>Кавказская кухня</a><ul> 
+     <li><a href=linkc1.html>Суп-харчо</a></li> 
+     <li><a href=linkc2.html>Лилибдж</a></li> 
+     <li><a href=linkc3.html>Чихиртма</a></li> 
+     <li><a href=linkc4.html class=brd>Шашлык</a></li> 
+    </ul> 
+   </li> 
+   <li><a href=asia.html style="background-image: none; padding-left: 3px">Кухня Средней Азии</a></li> 
+ </ul>
+<br style="clear: left">
+Продолжение следует...
+</body>
+</html>

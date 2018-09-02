@@ -1,0 +1,32 @@
+<html>
+<head>
+<style type="text/css">
+ .menu {
+  width: 200px				/* Ширина меню */
+}
+ .menu A {
+  display: block;			/* Ссылка как блочный элемент */
+  width: 100%;				/* Ссылка на всю ширину меню */
+  padding: 5px;				/* Поля вокруг надписи */
+  border-left: 10px solid #13694e;	/* Линия слева */
+  border-bottom: 1px solid silver;	/* Линия между пунктами */
+  background: #74a18e;			/* Исходный цвет фона */
+  color: white;				/* Исходный цвет текста */
+  text-decoration: none			/* Убираем подчеркивание у ссылок */
+}
+ .menu A:hover {
+  border-left-color: orange;		/* Меняем цвет линии слева */
+  background: #a18e74;			/* Новый цвет фона под ссылкой */
+  color: #ffffcc			/* Новый цвет ссылки */
+}
+</style>
+</head>
+<body>
+ <div class=menu>
+  <div><a href=link1.html>Чебурашка</a></div>
+  <div><a href=link2.html>Крокодил Гена</a></div>
+  <div><a href=link3.html>Шапокляк</a></div>
+  <div><a href=link4.html style="border-bottom: none">Крыса Лариса</a></div>
+ </div>
+</body>
+</html>

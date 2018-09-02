@@ -1,0 +1,38 @@
+<html>
+<head>
+<style type="text/css">
+ BODY {
+  text-align: center		/* Выравниваем содержимое веб-страницы по центру */
+}
+ .menu {
+  width: 90%;			/* Ширина меню относительно окна браузера */
+  margin-left: auto;		/* Отступ слева для браузера Opera и Netscape */
+  margin-right: auto;		/* Отступ справа для браузера Opera и Netscape */
+  white-space: nowrap		/* Запрещаем переносы строк в тексте */
+}
+ .item {
+  float: left; 			/* Состыковка с соседним слоем */
+  width: 24%; 			/* Ширина каждого слоя */
+  background: #ccc; 		/* Цвет фона меню */
+  border-left: 1px solid black 	/* Черная линия слева */
+}
+ .item A {
+  display: block;		/* Ссылка как блочный элемент */
+  padding: 7px 			/* Поля вокруг текста ссылки */
+}
+ .item A:hover {
+  background: #fc0 		/* Цвет фона подсветки */
+}
+</style>
+</head>
+<body>
+ <div class=menu>
+  <div class=item><a href=link1.htm>Чебурашка</a></div>
+  <div class=item><a href=link2.htm>Крокодил Гена</a></div>
+  <div class=item><a href=link3.htm>Шапокляк</a></div>
+  <div class=item style="border-right: 1px solid black"><a href=link4.htm>Крыса Лариса</a></div>
+ </div>
+ <br style="clear: both">
+ Продолжение следует...
+</body>
+</html>

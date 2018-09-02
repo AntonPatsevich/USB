@@ -1,0 +1,30 @@
+<html>
+<head> 
+<style type="text/css">
+/* Первый способ */
+ A { 
+  border: 1px solid white; 	/* Белая рамка, совпадающая с цветом фона */
+  padding: 1px; 		/* Поле вокруг ссылки */
+  text-decoration: none 	/* Убираем подчеркивание у ссылок */
+}
+ A:hover { 
+  border: 1px solid red 	/* Красная рамка вокруг ссылки */
+}
+
+/* Второй способ */
+ A { 
+  text-decoration: none; 	/* Убираем подчеркивание у ссылок */
+  padding: 2px 			/* Поле вокруг ссылки */
+}
+ A:hover { 
+  border: 1px solid red; 	/* Красная рамка вокруг ссылки */
+  padding: 1px 			/* Изменяем величину поля вокруг ссылки */
+}
+</style>
+</head>
+<body>
+  <p><a href=link1.html>Ссылка 1</a>
+  <p><a href=link2.html>Ссылка 2</a>
+  <p><a href=link3.html>Ссылка 3</a>
+</body>
+</html>

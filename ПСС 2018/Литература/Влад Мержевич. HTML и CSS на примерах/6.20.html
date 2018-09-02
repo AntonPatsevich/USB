@@ -1,0 +1,31 @@
+<html>
+<head>
+<style type="text/css">
+ TABLE {
+  border: 1px solid black		/* Рамка вокруг таблицы */
+}
+ TH {
+  text-align: left;			/* Выравнивание текста по левому краю */
+  background: chocolate;		/* Цвет фона заголовка */
+  color: bisque;			/* Цвет текста заголовка */
+  border-bottom: 2px solid black	/* Граница внизу заголовка */
+}
+ .odd {
+  background: #fec688;			/* Цвет фона нечетных колонок */
+  border-left: 1px dashed chocolate	/* Линия слева от колонки */
+}
+ .even {
+  background: #fbdebc; 			/* Цвет фона четных колонок */
+  border-left: 1px dashed chocolate	/* Линия слева от колонки */
+}
+</style>
+</head>
+<body>
+ <table width=300 cellspacing=0 cellpadding=4>
+  <tr><th>&nbsp;</th><th>2003</th><th>2004</th><th>2005</th></tr>
+  <tr><td>Нефть</td><td class=odd>43</td><td class=even>51</td><td class=odd>79</td></tr>
+  <tr><td>Золото</td><td class=odd>29</td><td class=even>34</td><td class=odd>48</td></tr>
+  <tr><td>Дерево</td><td class=odd>38</td><td class=even>57</td><td class=odd>36</td></tr>
+ </table>
+</body>
+</html>

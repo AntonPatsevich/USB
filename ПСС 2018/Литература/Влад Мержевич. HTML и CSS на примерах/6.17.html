@@ -1,0 +1,40 @@
+<html>
+<head>
+<style type="text/css">
+ TABLE {
+  border-bottom: 2px solid black;	/* Линия внизу таблицы */
+  background: oldlace;			/* Цвет фона нечетных строк */
+  border-collapse: collapse		/* Линия между ячейками отображается как одна */
+}
+ TH {
+  background: firebrick;		/* Цвет фона заголовка */
+  border-bottom: 2px solid black;	/* Линия под заголовком */
+  color: white 				/* Цвет текста заголовка */
+}
+ TD {
+  text-align: center;			/* Выравнивание текста ячеек по центру */
+  border-bottom: 1px dotted firebrick	/* Пунктирная линия между строками */
+}
+ TD.title {
+  text-align: left;		/* Выравнивание текста по левому краю */
+  font-style: italic;		/* Курсивный текст */
+  font-weight: bold;		/* Жирное начертание */
+}
+ TR.even {
+  background: white;		/* Цвет фона у четных строк */
+  color: firebrick		/* Цвет текста четных строк */
+}
+</style>
+</head>
+<body>
+<table width=300 border=0 cellspacing=0 cellpadding=4>
+  <tr><th>&nbsp;</th><th>2003</th><th>2004</th><th>2005</th></tr>
+  <tr><td class=title>Нефть</td><td>43</td><td>51</td><td>79</td></tr>
+  <tr class=even>
+    <td class=title>Золото</td><td>29</td><td>34</td><td>48</td></tr>
+  <tr><td class=title>Дерево</td><td>38</td><td>57</td><td>36</td></tr>
+  <tr class=even>
+    <td class=title>Камни</td><td>17</td><td>26</td><td>92</td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+<style type="text/css">
+ .col {
+  background: #ccc;		/* Цвет фона флажка */
+  color: red;			/* Цвет галочки в браузере Opera */
+  border: 1px solid black;	/* Рамка вокруг флажка */
+  margin-right: 7px		/* Отступ между текстом и флажком */
+}
+</style>
+</head>
+<body>
+ <form action=/cgi-bin/handler.cgi>
+  <b>С какими операционными системами вы знакомы?</b><br>
+  <input class=col type=checkbox name=option1 value=a1 checked> Windows 95/98<br>
+  <input class=col type=checkbox name=option2 value=a2> Windows 2000<br>
+  <input class=col type=checkbox name=option3 value=a3> System X<br> 
+  <input class=col type=checkbox name=option4 value=a4> Linux<br> 
+  <input class=col type=checkbox name=option5 value=a5> X3-DOS
+  <p><input type=submit value="Отправить">
+ </form> 
+</body>
+</html>

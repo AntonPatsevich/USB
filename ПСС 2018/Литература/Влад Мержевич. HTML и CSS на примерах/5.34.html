@@ -1,0 +1,33 @@
+<html>
+<head>
+<style type="text/css">
+ .panel { 
+  width: 320px				/* Общая ширина панели */
+}
+ .panelTitle {
+  background: 
+   url(top-bg.gif) 			/* Путь к файлу с верхней линией */
+   repeat-x;				/* Повторять фон только по горизонтали */
+  border-right: 2px solid black		/* Линия справа */
+}
+ .panelBody {
+  padding: 7px;			/* Поля вокруг основного текста */
+  border: 2px solid black;	/* Параметры границы */
+  border-top: none;		/* Верхнюю линию не рисуем */
+  background: 
+   url(bottom-bg.gif) 		/* Путь к файлу с уголком */
+   right bottom 		/* Помещаем изображение в правый нижний угол */
+   no-repeat;			/* Отменяем повторение фона */
+  background-color: #e6e6e6	/* Цвет фона под текстом */
+}
+</style>
+</head>
+<body>
+ <div class=panel>
+  <div class=panelTitle><img src=title.gif width=143 height=31></div>
+  <div class=panelBody>
+  Содержимое 
+  </div>
+ </div>
+</body>
+</html>

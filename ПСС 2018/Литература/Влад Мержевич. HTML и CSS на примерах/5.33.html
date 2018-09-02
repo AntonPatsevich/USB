@@ -1,0 +1,39 @@
+<html>
+<head>
+<style type="text/css">
+ .panel { 
+  background: 
+   url(top-left.gif)		/* Путь к файлу с левым уголком */
+   left top 			/* Размещаем фон в левом верхнем углу */
+   no-repeat;			/* Отменяем повторение фона */
+  width: 320px			/* Ширина панели в пикселах */
+}
+ H1.panelTitle {
+  background: 
+   url(top-right.gif) 		/* Путь к файлу с правым уголком */
+   right top 			/* Размещаем фон в правом верхнем углу */
+   no-repeat; 			/* Отменяем повторение фона */
+  font-family: Arial, sans-serif;	/* Рубленый шрифт для заголовка */
+  font-size: 120%;		/* Размер текста заголовка */
+  color: #ffffee;		/* Цвет текста в заголовке */
+  text-align: center;		/* Выравниваем заголовок по центру */
+  margin: 0px;			/* Убираем для тега H1 отступы */
+  padding: 4px 7px		/* Добавляем поля вокруг заголовка */
+}
+ .panelBody {
+  padding: 7px;			/* Поля вокруг текста */
+  border: 1px solid black;	/* Параметры рамки */
+  border-top: none;		/* Убираем верхнюю границу */
+  background: #ccc		/* Цвет фона */
+}
+</style>
+</head>
+<body>
+ <div class=panel>
+  <h1 class=panelTitle>Заголовок</h1>
+  <div class=panelBody>
+   Содержимое
+  </div>
+ </div>
+</body>
+</html>

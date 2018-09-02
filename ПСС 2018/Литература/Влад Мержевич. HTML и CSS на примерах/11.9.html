@@ -1,0 +1,36 @@
+<html>
+<head>
+<script language="JavaScript">
+function newImage(arg) {
+// Проверяем, есть ли вообще изображения на странице
+  if (document.images) {     
+   result = new Image(); // Создаем новый объект типа Image
+   result.src = arg; // Присваиваем ему адрес изображения
+   return result; // Возвращаем результат
+  }
+}
+
+// Первоначально изображения в память не загружены
+preloadFlag = false; 
+function preloadImages() {
+  frame = new Array(); // Заводим новый массив с именем frame
+
+// В массиве аrg хранятся все аргументы функции preloadImages
+  arg = preloadImages.arguments; 
+
+// Проверяем, есть ли вообще изображения на странице
+  if (document.images) { 
+// Пробегаемся по всем аргументам функции
+    for (i=0; i<arg.length; i++) { 
+// И для каждого изображения вызываем функцию newImage()
+frame[i] = newImage(arg[i]); 
+    }
+    preloadFlag = true; // Да, все изображения загружены!
+  }
+}
+</script>
+</head>
+<body onLoad="preloadImages('greentab.jpg', 'orangetab.jpg')">
+ ...
+</body>
+</html>
