@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="main.xsl"?>
+<computer>
+    <element>
+      <number>1</number>
+      <name>Корпус Mini Tower</name>
+      <price>199 500</price>
+      <count>1</count>
+      <summa>199 500</summa>
+    </element>
+     <element>
+      <number>2</number>
+      <name>Видеокарта SVGA/1M/PCI S3 Trio64</name>
+      <price>205 100</price>
+      <count>1</count>
+      <summa>205 100</summa>
+    </element>
+     <element>
+      <number>3</number>
+      <name>Клавиатура (рус/лат) CHERRY</name>
+      <price>199 500</price>
+      <count>1</count>
+      <summa>199 500</summa>
+    </element>
+     <element>
+      <number>4</number>
+      <name>Мышь One Genius</name>
+      <price>55 400</price>
+      <count>2</count>
+      <summa>110 800</summa>
+    </element>
+     <element>
+      <number>5</number>
+      <name>Дисковод CD-ROM/8-x/AT BUS</name>
+      <price>637 400</price>
+      <count>1</count>
+      <summa>637 400</summa>
+    </element>
+     <element>
+      <number>6</number>
+      <name>Звуковая карта Sound Bluster 16 IDE</name>
+      <price>498 800</price>
+      <count>1</count>
+      <summa>498 800</summa>
+    </element>
+     <element>
+      <number>7</number>
+      <name>Звуковые колонки PC (активные)</name>
+      <price>88 700</price>
+      <count>1</count>
+      <summa>88 700</summa>
+    </element>
+</computer>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT xsl:stylesheet (xsl:template)>
+<!ATTLIST xsl:stylesheet
+          version CDATA #IMPLIED
+          xmlns:xsl CDATA #IMPLIED>
+<!ELEMENT xsl:template (h2, table)>
+<!ATTLIST xsl:template
+          match CDATA #REQUIRED>
+<!ELEMENT h2 (#PCDATA)>
+<!ELEMENT table (tr, xsl:for-each)>
+<!ATTLIST table
+          border CDATA #REQUIRED>
+<!ELEMENT tr (td+)>
+<!ATTLIST tr
+          bgcolor CDATA #IMPLIED>
+<!ELEMENT td (#PCDATA | xsl:value-of)*>
+<!ATTLIST td
+          align CDATA #IMPLIED>
+<!ELEMENT xsl:for-each (tr)>
+<!ATTLIST xsl:for-each
+          select CDATA #REQUIRED>
+<!ELEMENT xsl:value-of EMPTY>
+<!ATTLIST xsl:value-of
+          select CDATA #REQUIRED>

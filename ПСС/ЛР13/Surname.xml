@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="Ssurname.xsl"?>
+<tablee>
+    <rec>
+      <name>Маленькие</name>
+      <tables>210.00</tables>
+      <chairs>200.00</chairs>
+      <tables1>150.00</tables1>
+      <chairs1>180.00</chairs1>
+      <total>740.00</total>
+    </rec>
+    <rec>
+      <name>Большие</name>
+      <tables>280.00</tables>
+      <chairs>220.00</chairs>
+      <tables1>230.00</tables1>
+      <chairs1>200.00</chairs1>
+      <total>930.00</total>
+    </rec>
+    <rec>
+      <name>Всего</name>
+      <tables>490.00</tables>
+      <chairs>420.00</chairs>
+      <tables1>380.00</tables1>
+      <chairs1>380.00</chairs1>
+      <total>1670.00</total>
+    </rec>
+</tablee>
