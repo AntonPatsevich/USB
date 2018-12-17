@@ -8,6 +8,6 @@
 <!ELEMENT gradeList (gradeRecord+)>
 <!ELEMENT gradeRecord (student, grade)>
 <!ATTLIST gradeRecord
-          id CDATA #REQUIRED>
-<!ELEMENT student (#PCDATA)>
+          id CDATA #REQUIRED>       <!ELEMENT student (#PCDATA)>
 <!ELEMENT grade (#PCDATA)>
+
