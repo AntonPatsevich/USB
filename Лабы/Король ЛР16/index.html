@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+    <script type="text/javascript" src="javascript.js"></script>
+</head>
+<body>
+    <FORM name=Sum>
+        Первое число <INPUT type="text" name="number1"><BR>
+        Второе число <INPUT type="text" name="number2"><BR>
+            <input type="button" name="but" value=" Вычислить сумму "
+            onClick="document.forms[0].elements[3].value=parseInt(document.forms[0].elements[0].value)+parseInt(document.forms[0].elements[1].value);">
+            <BR><BR>
+        Сумма <INPUT type="text" name="result">
+
+            <input type="button" name="but1"
+            value=" Вычислить сумму "
+            onClick="document.Sum.result.value=parseInt(document.Sum.number1.value)+parseInt(document.Sum.number2.value);">
+    </FORM>
+
+    <div>
+        <p id="1" onclick="changeP()">Здесь расположен параграф, который будет заменён при нажатии</p>
+    </div>
+</body>
+</html>

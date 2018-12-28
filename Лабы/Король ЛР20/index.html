@@ -1,0 +1,26 @@
+<html>
+<head>
+<title> Работа с изображениями</title>
+<script type="text/javascript">
+function f(source){
+	document.thum.src ='img/'+ source + '.jpg';
+}
+</script>
+<style>
+li{
+	list-style-type: none;
+	width: 0px;
+}
+</style>
+</head>
+<body>
+<h2> Объект Image </h2>
+<img src= "img/1.jpg" name="thum" height=400 width=400>
+<ul>
+	<li value="image1" onMouseOver="f(1);">Первое</li>
+	<li value="image2" onMouseOver="f(2);">Второе</li>
+	<li value="image3" onMouseOver="f(3);">Третье</li>
+	<li value="image4" onMouseOver="f(4);">Четвёртое</li>
+</ul>
+</body>
+</html>

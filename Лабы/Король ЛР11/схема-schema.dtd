@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT timetable (day)>
+<!ELEMENT day (lesson+)>
+<!ATTLIST day
+          dayOfWeek CDATA #REQUIRED>
+<!ELEMENT lesson (timeFrom, timeTo, subject, teacher, room)>
+<!ATTLIST lesson
+          type CDATA #REQUIRED>
+<!ELEMENT timeFrom (#PCDATA)>
+<!ELEMENT timeTo (#PCDATA)>
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT teacher (#PCDATA)>
+<!ELEMENT room (#PCDATA)>

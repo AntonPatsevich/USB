@@ -1,0 +1,82 @@
+body
+{
+    background-color: #ffe58d;
+}
+
+#header
+{
+    margin-right: 140px;
+    padding: 20px;
+
+    border-width: 10px;
+    border-style: dashed;
+    border-color: #5b72fe;
+    background-color: #ffb400;
+}
+
+#first_line
+{
+    font-size: 60px;
+}
+
+#second_line
+{
+    font-size: 40px;
+}
+
+#zav
+{
+    font-size: 40px;
+
+    color: #f00;
+    background-color: #fff;
+}
+
+div.title
+{
+    font-size: 60px;
+
+    padding-top: 100px;
+
+    text-align: center;
+
+    color: #00ff0c;
+}
+
+#text
+{
+    font-size: 40px;
+
+    border-width: 8px;
+    border-color: #db0b0b;
+    border-right: solid;
+    border-bottom: solid;
+}
+
+b
+{
+    font-size: 50px;
+
+    color: white;
+    background-color: #0a28dd;
+}
+
+#fio
+{
+    font-size: 40px;
+
+    padding-top: 100px;
+
+    text-align: center;
+
+    color: green;
+}
+
+#date
+{
+    font-size: 30px;
+
+    text-align: center;
+
+    border-style: dotted;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="javasc.js"></script>
+</head>
+<body>
+	<h1> Верстка для индивидуальные заданий по <em>jQuery</em> <a href="http://theory.phphtml.net/">на выборку, работу с событиями и анимацией</a> </h1>
+	<div class="row">
+		<h2><em>jQuery</em> для начинающих</h2>
+		<div class="col-md-4">
+			<br><strong><em>jQuery</em></strong> это замечательный  <mark>JavaScript Framework</mark>, который подкупает своей простотой в понимании и удобством в использовании. Но изучение надо с чего-то начинать, и лично моё мнение — лучше всего начинать с наглядных примеров.
+		</div></div>
+		<hr  color=green>
+		<div class="row">
+			<h2>Как получить элемент с помощью <em>jQuery</em>?</h2>
+			<div class="col-md-4">Для того чтобы понимать как работает <strong>селектор</strong> Вам необходимы базовые знания <mark>CSS</mark> , т.к. именно от принципов <mark>CSS</mark> отталкивает <strong>селектор</strong>  <em>jQuery</em> :  </div>
+			<ul>
+				<li>$("#header") — получение элемента с id=«header»
+					<li>$(«h3») — получить все &lt;h3&gt; элементы
+						<li>$(«div#content .photo») — получить все элементы с классом =«photo» которые находятся в элементе div с id=«content»
+							<li>$(«ul li») — получить все <li> элементы из списка &lt;ul&gt;
+								<li>$(«ul li:first») — получить только первый элемент &lt;li&gt; из списка &lt;ul&gt;
+								</ul></div>
+								<a href="http://theory.phphtml.net/tasks/javascript/jquery/rabota-s-naborom-elementov-jquery.html">Манипулирование элементами страницы</a>
+								<hr  color=green>
+								<div class="row">
+									<h2>Выдвижная панель</h2>
+									<div class="col-md-4">Начнем с простенького <mark>примера</mark> — слайд-панель, она у нас будет двигаться <em>вверх/вниз</em> по клику на ссылке</div>
+									<div class="col-md-4">Реализуем это следующим образом, по клику на ссылку, у нас будет переключаться её <strong>класс</strong> (между «active» и «btn-slide»), а <strong>панелька </strong>с id=«panel» будет <em>выдвигаться/прятаться</em>. <strong>Класс</strong> «active» изменяет позицию фонового изображения.</div>
+									<pre>
+										$(document).ready(function(){
+										$(".btn-slide").click(function(){
+										$("#panel").slideToggle("slow");
+										$(this).toggleClass("active");
+									});
+								});
+							</pre></div>
+							<a href="http://theory.phphtml.net/tasks/javascript/jquery/rabota-s-sobytiyami-jquery.html">Работа с событиями <em>jQuery</em></a>
+							<hr  color=green>
+							<div class="row">
+								<h2>Магические исчезновения</h2>
+								<div class="col-md-4">Этот <strong>пример</strong> покажет как можно красиво и легко <em>убирать/растворять</em> элементы </div>
+								<div class="col-md-4">Когда мы <strong>кликаем по картинке</strong> &lt;img class=«delete»&gt;, будет найден <em>родительский элемент</em> &lt;div class=«pane»&gt;, 
+									и его <mark>прозрачность</mark> будет медленно изменяться от opacity= 1.0 до opacity=hide:
+								</div>
+								<pre>
+									$(document).ready(function(){
+									$(".pane .delete").click(function(){
+									$(this).parents(".pane").animate({ opacity: "hide" }, "slow");
+								});
+							});
+						</pre></div>
+						<a href="http://theory.phphtml.net/tasks/javascript/jquery/rabota-s-effektami-i-animaciej-jquery.html">Эффекты и анимация библиотеки <em>jQuery</em></a>
+						<hr  color=green>
+						<button id="but1">ЗАДАНИЕ 1</button>
+						<button id="but2">ЗАДАНИЕ 2</button>
+						<button id="but3">ИСЧЕЗНУТЬ</button>
+					</body>
+					</html>

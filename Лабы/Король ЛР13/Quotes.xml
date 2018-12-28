@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="Quotes.xsl"?>
+<?xml-stylesheet type="text/xsl" href="Quotes2.xsl"?>
+<!-->-цитаты великих людей -->
+  <Quotes>
+      <Quote>
+      <Text> Хотели как лучше, а получилось как всегда.</Text>
+        <Author>Виктор Черномырдин</Author>
+      </Quote>
+    <Quote>
+      <Text>Америка - континент, названный так потому, что его открыл Колумб.</Text>
+      <Author>Жорж Элгози</Author>
+    </Quote>
+    <Quote>
+      <Text>Я прихожу в бешенство от одной мысли о том, сколько бы я всего узнал, если бы не ходил в школу.</Text>
+      <Author>Джордж Бернард Шоу</Author>
+    </Quote>
+    <Quote>
+      <Text>Многое придумано для того, чтобы не думать.</Text>
+      <Author>Карел Чапек</Author>
+    </Quote>
+    <Quote>
+      <Text>Если скажешь правду, все равно рано или позно попадешься.</Text>
+      <Author>Оскар Уайльд</Author>
+    </Quote>
+    <Quote>
+      <Text>Быть ему президентом, если его до той поры не повесят.</Text>
+      <Author>Марк Твен</Author>
+    </Quote>
+  </Quotes>
+

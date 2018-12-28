@@ -1,0 +1,67 @@
+<html>
+<head>
+<script type="text/javascript" src="lr19.js">
+</script>
+
+</head>
+<body >
+<form name="f1" onsubmit="return CheckForm(this)">
+Введите имя: &nbsp;<input type="text" name="name" size="20"><br>
+Ваш  E-mail: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" name="email"  size="20" ><br>
+Комментарий:<textarea rows="3" name="Comment" cols="20"></textarea>
+<br>
+<input value="Отправить" type="submit" ><br>
+<input type="reset">
+</form>
+<hr>
+<form name="f">
+<table border=1>
+<tr>
+<td>
+<select name="left" size=6>
+<option value="Литература" selected> Литература
+<option value="Математика"> Математика
+<option value="Геометрия"> Геометрия
+<option value="Физика"> Физика
+<option value="Физкультура"> Физкультура
+<option value="История"> История
+</select>
+</td>
+<td>
+<Input type="button" value="move->" OnClick="move()"><br><br>
+<Input type="button" value=" delete " OnClick="del()">
+</td>
+<td>
+<select name="right" size=6 style='width="123"'>
+<option value='v1'>
+<option value='v2'>
+<option value='v3'>
+<option value='v4'>
+</select>
+</td>
+</tr>
+</table>
+</form>
+
+<hr>
+
+<form name="f4">
+	<table><tr><td>
+	<input type="checkbox" class="chch" value="Новости">Новости<br>
+	<input type="checkbox" class="chch" value="Гости">Гости <br>
+	<input type="checkbox" class="chch" value="Награждения">Награждения<br>
+	<input type="checkbox" class="chch" value="Образование">Образование<br>
+	<input type="checkbox" class="chch" value="Досуг">Досуг<br>
+	<input type="checkbox" class="chch" value="Развлечения">Развлечения<br>
+	<input type="checkbox" class="chch" value="Карьера">Карьера<br>
+	    </td><td>
+	   <input type="textarea" name="ta1" style="width: 400px">
+
+	<input type="button" name="bb" value="zzz" onclick="pr3();"></td></tr>
+	
+	
+</table>
+</form>
+</body>
+</html>

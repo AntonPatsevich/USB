@@ -1,0 +1,36 @@
+<html>
+<head>
+<title> Работа с изображениями</title>
+<script type="text/javascript" src="lr20.js"></script>
+</head>
+<body>
+<h2> Объект Image </h2>
+
+<ul type="none" >
+	<li value="image1" onmouseover="loadIm1()">Изображение 1</li>
+	<li value="image2" onmouseover="loadIm2()">Изображение 2</li>
+	<li value="image3" onmouseover="loadIm3()">Изображение 3</li>
+	<li value="image4" onmouseover="loadIm4()">Изображение 4</li>
+</ul>
+<img src= "images/1.jpg" name="thum" height=90 width=120>
+<br><br>
+
+<div >
+	<div style="width: 10%; float: left; border: solid black 2px;" onclick="menu();">ЛР17</div>
+
+	<div style="width: 10%;float: left; border: solid black 2px;" onclick="menu2();">ЛР18</div>
+	<div style="width: 10%; float: left; border: solid black 2px;" onclick="menu3();">ЛР19</div><br><br>
+		<div id="menu1" style="border: solid black 2px; width: 10%; float: left; ">
+		<a href="../ЛР 17/лр17.html">ЛР17</a>
+	</div>
+	<div id="menu2" style="border: solid black 2px; width: 10%; float: left;">
+		<a href="../ЛР 18/лр18.html">ЛР18</a>
+	</div>
+	<div id="menu3" style="border: solid black 2px; width: 10%; float: left;">
+		<a href="../ЛР 19/lr 19.html">ЛР19</a>
+	</div>
+</div><br><br>
+
+<img onmouseenter="img1();" onmouseleave="img2();" src= "images/1.jpg" name="img2" height=190 width=270>
+</body>
+</html>
