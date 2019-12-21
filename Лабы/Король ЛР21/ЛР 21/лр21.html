@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> Работа с изображениями</title>
+<script type="text/javascript" src="lr21.js"></script>
+</head>
+<style type="text/css">
+	.but{ 
+		height: 60px; 
+		width: 60px;
+		padding: 20px;
+	}
+</style>
+<body>
+<div class="calc">
+<form name="f1">
+	
+	<input type="text" name="z1" style="width: 200px; height: 30px">
+	<input type="button" name="equal" value="="  style=" font-size: 20px; width: 50px; height: 30px;" onclick="equalfunc();">
+	<br><br>
+	<input type="button" name="seven" value="7" class="but" onclick="addnumber(this);">
+	<input type="button" name="eight" value="8" class="but" onclick="addnumber(this);">
+	<input type="button" name="nine" value="9" class="but" onclick="addnumber(this);">
+	<input type="button" name="del" value="del" class="but" style="color: red;" onclick="clearinput();">
+	<br><br><br>
+	<input type="button" name="four" value="4" class="but" onclick="addnumber(this);">
+	<input type="button" name="five" value="5" class="but" onclick="addnumber(this);">
+	<input type="button" name="six" value="6" class="but" onclick="addnumber(this);">
+	<input type="button" name="div" value="/" class="but" style="color: red;" onclick="addnumber(this);">
+	<br><br><br>
+	<input type="button" name="one" value="1" class="but" onclick="addnumber(this);">	
+	<input type="button" name="two" value="2" class="but" onclick="addnumber(this);">
+	<input type="button" name="three" value="3" class="but" onclick="addnumber(this);">
+	<input type="button" name="mul" value="*" class="but" style="color: red;" onclick="addnumber(this);">	<br><br><br>
+	<input type="button" name="sub" value="-" class="but" style="color: red;" onclick="addnumber(this);">
+	<input type="button" name="zero" class="but" value="0" onclick="addnumber(this);">
+	<input type="button" name="plus" value="+" class="but" style="color: red;" onclick="addnumber(this);">
+	<input type="button" name="point" value="." class="but" style="color: red;" onclick="addnumber(this);">
+	<br><br><br>
+	<input type="button" name="sin" value="sin" class="but" style="color: red;" onclick="sinfunc();">
+	<input type="button" name="cos" value="cos" class="but" style="color: red;" onclick="cosfunc();">
+	<input type="button" name="ln" value="ln" class="but" style="color: red;" onclick="lnfunc();">
+	<input type="button" name="sqrt" value="sqrt" class="but" style="color: red;" onclick="sqrtfunc();"><br><br><br>
+	<input type="button" name="xx" value="1/x" class="but" style="color: red;" onclick="xxfunc();">
+	<input type="button" name="x2" value="x^2" class="but" style="color: red;" onclick="x2func();">
+	<input type="button" name="ex" value="e^x" class="but" style="color: red;" onclick="exfunc();">
+	<input type="button" name="x10" value="10^x" class="but" style="color: red;" onclick="x10func();" >
+</form>
+</div>
+</body>
+</html>

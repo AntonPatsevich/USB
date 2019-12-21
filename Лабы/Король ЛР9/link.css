@@ -1,0 +1,48 @@
+h1 {border-width:5; border:outset; text-align:right; color:red; background-image:url("8.jpg"); background-repeat: repeat-y;} <!-- это Г)-->
+h3 {color:red; font-style:italic}
+h2.lime {color:lime; text-align:center}
+p.new1 {text-indent:20; color:blue; font-size:45pt; font-style:oblique; text-align: right}
+p.new2 { color:brown; letter-spacing: 5pt}
+#fuchsia {color:fuchsia; font-size:30pt; font-weight:bolder}
+p.new3{
+	font-stretch: small;
+	font-family: serif;
+	font-style: oblique;
+	font-size: 40px;
+
+}
+#new4{
+	font-family: sans-serif;
+	font-style: oblique;
+	font-weight: 900;
+	font-size: 50px;
+}
+#zag{
+	text-align: center;
+	font-size: 40px;
+}
+p{
+	text-align: right;
+	text-indent: 25px;
+}
+
+p:first-letter{
+	color:red;
+}
+
+a{
+	color: green;
+	font-style: italic;
+}
+a:visited{
+	font-style: bold;
+	color: yellow;
+}
+a:active{
+	color: purple;
+	font-style: underline;
+}
+a:hover{
+	color: red;
+	font-size: 20px;
+}

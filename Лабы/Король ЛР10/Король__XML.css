@@ -1,0 +1,36 @@
+/* File Name: Inventory02.css */
+Номер{
+  display: block;
+  font-size: 30px;
+  margin-top: 40px;
+  border-style: dotted;
+}
+
+#вот{
+  color: red;
+}
+
+#first_student:after {
+    content: " - Добавляем после!";
+   }
+
+#first_student{
+  background-color: #DDD4D4;
+  font-size: 20px;
+  font-style:italic;
+}
+
+#second_student{
+  background-color: #DDD4D4;
+  font-size: 20px;
+}
+
+#third_student{
+  background-color: #DDD4D4;
+  font-size: 20px;
+}
+
+#fourth_student{
+  background-color: #DDD4D4;
+  font-size: 20px;
+}

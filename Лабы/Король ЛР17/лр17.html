@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC «-//W3C//DTD HTML 4.01 Transitional//EN» «http://www.w3.org/TR/html4/loose.dtd»>
+<html>
+	<head>
+		<script type="text/javascript" src="lr17.js"></script>
+		<h2 id="p1"></h2>
+		<style type="text/css">
+			ul{
+				list-style-type: none;
+			}
+		</style>
+	</head>
+	<body onload="time();">
+		<form name="f1" style="border: 3px solid black; padding: 15px; width: 400px; " >
+			<h2>Расчет значений функции</h2>
+			<img src="img/img.png"><br>
+			<p>Начальное значение х:</p>
+			<input type="text" name="t1"><br>
+			<p>Конечное значение х:</p>
+			<input type="text" name="t2"><br>
+			<p>Шаг:</p>
+			<input type="text" name="t3"><br><br>
+			<input type="button" name="b1" value="рассчитать" onclick="rez();"><br>
+		</form>
+		<p id="p2"></p>
+		<hr>
+		<table width="435px">
+			<tr ><td style="text-align: right;">
+				<ul id="list1">
+			<li>Значение</li>
+		</ul>
+			</td><td >
+		<ul id="list">
+			<li>Ответ</li>
+		</ul>
+		</td>
+		</tr>
+		</table>
+	</body>
+	</html>

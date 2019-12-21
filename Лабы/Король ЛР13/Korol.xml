@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="Korol.xsl"?>
+<mebel>
+<category>
+<name>Маленькие</name>
+ <tables>210,00</tables>
+ <chairs>200,00</chairs>
+ <tables>150,00</tables>
+ <chairs>180,00</chairs>
+ <itogo>740,00</itogo>
+</category>
+<category>
+<name>Большие</name>
+<tables>280,00</tables>
+<chairs>220,00</chairs>
+<tables>230,00</tables>
+<chairs>200,00</chairs>
+<itogo>930,00</itogo>
+</category>
+<category>
+<name>Всего</name>
+<tables>490,00</tables>
+<chairs>420,00</chairs>
+<tables>380,00</tables>
+<chairs>380,00</chairs>
+<itogo>1 670,00</itogo>
+</category>
+</mebel>
+
+

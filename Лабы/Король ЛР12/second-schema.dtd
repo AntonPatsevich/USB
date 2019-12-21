@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT gradeReport (date, subject, examiner, gradeList)>
+<!ATTLIST gradeReport
+          id CDATA #IMPLIED>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT examiner (#PCDATA)>
+<!ELEMENT gradeList (gradeRecord+)>
+<!ELEMENT gradeRecord (student, grade)>
+<!ATTLIST gradeRecord
+          id CDATA #REQUIRED>
+<!ELEMENT student (#PCDATA)>
+<!ELEMENT grade (#PCDATA)>

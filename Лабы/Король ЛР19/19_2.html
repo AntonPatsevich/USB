@@ -1,0 +1,59 @@
+<html>
+<head>
+<script>
+var s=0
+function move()
+{
+	if (s != 3)
+		{
+		 	var a = f.left.value;
+		 	f.left.removeChild(f.left.options[f.left.selectedIndex]);
+		    f.right.options[s].text = a;
+		    s++;
+		}
+	 else
+	  {alert("Максимум три предмета")}
+}
+function del()
+{
+ if (s >= 1)
+ 	{
+ 		var a = f.right.value;
+ 		f.left.appendChild(f.right.options[f.right.selectedIndex]);
+ 		f.right.value = '';
+   		s--;
+	}
+}
+</script>
+</head>
+<body>
+<form name="f">
+	<table border=1>
+		<tr>
+		<td>
+			<select name="left" size=6>
+				<option value="Литература" selected> Литература
+				<option value="Математика"> Математика
+				<option value="Геометрия"> Геометрия
+				<option value="Физика"> Физика
+				<option value="Физкультура"> Физкультура
+				<option value="История"> История
+			</select>
+		</td>
+		<td>
+			<Input type="button" value="move->" OnClick="move()"><br><br>
+			<Input type="button" value=" delete " OnClick="del()">
+		</td>
+		<td>
+			<select name="right" size=6 style='width="123"'>
+				<option value='v1'>
+				<option value='v2'>
+				<option value='v3'>
+				<option value='v4'>
+			</select>
+		</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Король 8 вариант</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<table border="1">
+		<form>
+			<tr>
+				<td><b><font size="5px">Добавить фотографии в альбом</font></b></td>
+			</tr>
+			<tr>
+				<td>
+					<fieldset style="width: 420px;">
+						<legend>Информация о файле</legend>
+						<font>Выберите файл </font>
+						<div class="fileform">
+							<div class="selectbutton">Обзор</div>
+							<input id="upload" type="file" name="upload" />
+						</div>
+						<p><input type="checkbox" name="check"> обложжка альбома</p>
+						<p><input type="text" name="fileName">введите название файла</p>
+						<font><input type="number" min="1" name="fileName" style="width: 170px;">краткое описание файла</font>
+					</fieldset>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding-right: 5px;">
+					<p>
+						<input type="radio" name="radio">
+						Стандартный размер
+						<input type="radio" name="radio">
+						Подобрать размер
+						<input type="radio" name="radio">
+						Не изменять размер
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding-bottom: 20px;">
+					<input type="submit" name="send">
+					<input type="submit" name="send" value="Сброс">
+				</td>
+			</tr>
+		</form>
+	</table>
+</body>
+</html>
