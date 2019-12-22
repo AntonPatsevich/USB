@@ -1,4 +1,6 @@
 #pragma once
+#include <fstream>
+#include <string>
 
 namespace AlcoDoze {
 
@@ -55,6 +57,7 @@ namespace AlcoDoze {
 	private: MetroFramework::Controls::MetroTextBox^ metroTextBox2;
 	private: MetroFramework::Controls::MetroTextBox^ metroTextBox1;
 	private: MetroFramework::Controls::MetroLabel^ metroLabel6;
+	private: MetroFramework::Controls::MetroButton^  metroButton2;
 
 
 	private: System::ComponentModel::IContainer^ components;
@@ -84,6 +87,7 @@ namespace AlcoDoze {
 			this->metroTextBox2 = (gcnew MetroFramework::Controls::MetroTextBox());
 			this->metroTextBox1 = (gcnew MetroFramework::Controls::MetroTextBox());
 			this->metroLabel6 = (gcnew MetroFramework::Controls::MetroLabel());
+			this->metroButton2 = (gcnew MetroFramework::Controls::MetroButton());
 			this->SuspendLayout();
 			// 
 			// metroToolTip1
@@ -257,12 +261,23 @@ namespace AlcoDoze {
 			this->metroLabel6->TabIndex = 50;
 			this->metroLabel6->Theme = MetroFramework::MetroThemeStyle::Dark;
 			// 
+			// metroButton2
+			// 
+			this->metroButton2->Location = System::Drawing::Point(156, 263);
+			this->metroButton2->Name = L"metroButton2";
+			this->metroButton2->Size = System::Drawing::Size(75, 23);
+			this->metroButton2->TabIndex = 51;
+			this->metroButton2->Text = L"metroButton2";
+			this->metroButton2->UseSelectable = true;
+			this->metroButton2->Click += gcnew System::EventHandler(this, &Operations::metroButton2_Click);
+			// 
 			// Operations
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(450, 370);
+			this->Controls->Add(this->metroButton2);
 			this->Controls->Add(this->metroLabel6);
 			this->Controls->Add(this->metrobutton1);
 			this->Controls->Add(this->metroLabel4);
@@ -347,33 +362,52 @@ namespace AlcoDoze {
 				break;
 			}
 		}
-		void operations(double res)
+		void operations(double res, double c, double a, double m, double s)
 		{
-			double  r, c, a, m, ml;
+			double  r, *c, *a, m, ml;
 			const double p = 0.7893;
+			char *s;
 			drunks(&res);
 			switch (metroComboBox1->SelectedIndex)
 			{
 			case 0:
+				s[] = "Мужской";
 				r = 0.70;
 				m = Convert::ToDouble(metroTextBox1->Text);
 				ml = Convert::ToDouble(metroTextBox2->Text);
 				a = ml * p * res - 0.20;
 				c = a / m * r;
 				metroLabel6->Text = Convert::ToString(c);
+				printonfile(&res, &c, &a, &m, &s);
 				break;
 			case 1:
+				s[] = "Женский";
 				r = 0.60;
 				m = Convert::ToDouble(metroTextBox1->Text);
 				ml = Convert::ToDouble(metroTextBox2->Text);
 				a = ml * p * res - 0.20;
 				c = a / m * r;
 				metroLabel6->Text = Convert::ToString(c);
+				printonfile(&res, &c, &a, &m, &s);
 				break;
 			default:
 				MessageBox::Show("Выберите пол", "Предупреждение", MessageBoxButtons::OK, MessageBoxIcon::Warning);
 				break;
 			}
+		}
+		void printonfile(double* res, double* c, double* a, double* m, double* s)
+		{
+			std:: ofstream out;          // поток для записи
+			out.open("D:\\Report.doc"); // окрываем файл для записи
+			if (out.is_open())
+			{
+				out << "Пол:" << s << std::endl;
+				out << "Вес:" << m << std::endl;
+				out << "Процентное содержание алкоголя в выбранном напитке:" << res*100 << std::endl;
+				out << "Процент чистого алкоголя в выбранном напитке:" << a << std::endl;
+				out << "Концентрация алкоголя в крови:" << c << std::endl;
+			}
+		
 		}
 
 
@@ -384,11 +418,12 @@ namespace AlcoDoze {
 		metroToolTip1->IsBalloon = true;
 	}
 
-
 	private: System::Void metrobutton1_Click(System::Object^ sender, System::EventArgs^ e) {
 		double res;
-		operations(res);
+		operations(res, c, a, m, s);
 	}
 
-	};
+	private: System::Void metroButton2_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
+};
 }
