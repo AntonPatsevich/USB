@@ -263,7 +263,7 @@ namespace AlcoDoze {
 			// 
 			// metroButton2
 			// 
-			this->metroButton2->Location = System::Drawing::Point(156, 263);
+			this->metroButton2->Location = System::Drawing::Point(50, 263);
 			this->metroButton2->Name = L"metroButton2";
 			this->metroButton2->Size = System::Drawing::Size(75, 23);
 			this->metroButton2->TabIndex = 51;
@@ -362,48 +362,59 @@ namespace AlcoDoze {
 				break;
 			}
 		}
-		void operations(double res, double c, double a, double m, double s)
+		void operations(double res, double* a, double* m, double* c, double* s)
 		{
-			double  r, *c, *a, m, ml;
+		
+			double  r, ml;
 			const double p = 0.7893;
-			char *s;
 			drunks(&res);
 			switch (metroComboBox1->SelectedIndex)
 			{
 			case 0:
-				s[] = "Мужской";
+				*s = 1;
 				r = 0.70;
-				m = Convert::ToDouble(metroTextBox1->Text);
+				*m = Convert::ToDouble(metroTextBox1->Text);
 				ml = Convert::ToDouble(metroTextBox2->Text);
-				a = ml * p * res - 0.20;
-				c = a / m * r;
-				metroLabel6->Text = Convert::ToString(c);
-				printonfile(&res, &c, &a, &m, &s);
+				*a = ml * p * res - 0.20;
+				*c = *a / (*m) * r;
+				/*metroLabel6->Text = Convert::ToString(c);*/
 				break;
 			case 1:
-				s[] = "Женский";
+				*s = 0;
 				r = 0.60;
-				m = Convert::ToDouble(metroTextBox1->Text);
+				*m = Convert::ToDouble(metroTextBox1->Text);
 				ml = Convert::ToDouble(metroTextBox2->Text);
-				a = ml * p * res - 0.20;
-				c = a / m * r;
-				metroLabel6->Text = Convert::ToString(c);
-				printonfile(&res, &c, &a, &m, &s);
+				*a = ml * p * res - 0.20;
+				*c = *a / (*m) * r;
+			/*	metroLabel6->Text = Convert::ToString(c);*/
 				break;
 			default:
 				MessageBox::Show("Выберите пол", "Предупреждение", MessageBoxButtons::OK, MessageBoxIcon::Warning);
 				break;
 			}
+		
 		}
-		void printonfile(double* res, double* c, double* a, double* m, double* s)
+		void printonfile(double res, double c, double a, double m, double s)
 		{
-			std:: ofstream out;          // поток для записи
-			out.open("D:\\Report.doc"); // окрываем файл для записи
+			drunks(&res);
+			operations(res, &a, &m, &c, &s);
+			
+			
+			char* b_sex = "Мужской";
+			char* g_sex = "Женский";
+			std:: ofstream out;         
+			out.open("D:\\Report.doc"); 
 			if (out.is_open())
 			{
-				out << "Пол:" << s << std::endl;
+				if (s == 1) {
+					out << "Пол:" << b_sex << std::endl;
+				}
+				else {
+					out << "Пол:" << g_sex << std::endl;
+				}
+				
 				out << "Вес:" << m << std::endl;
-				out << "Процентное содержание алкоголя в выбранном напитке:" << res*100 << std::endl;
+				out << "Процентное содержание алкоголя в выбранном напитке:" << res *100 << std::endl;
 				out << "Процент чистого алкоголя в выбранном напитке:" << a << std::endl;
 				out << "Концентрация алкоголя в крови:" << c << std::endl;
 			}
@@ -419,11 +430,15 @@ namespace AlcoDoze {
 	}
 
 	private: System::Void metrobutton1_Click(System::Object^ sender, System::EventArgs^ e) {
-		double res;
-		operations(res, c, a, m, s);
+		double res, a, m, c,s;
+		operations(res, &a, &m, &c, &s); 
+		metroLabel6->Text = Convert::ToString(c);
 	}
 
 	private: System::Void metroButton2_Click(System::Object^  sender, System::EventArgs^  e) {
+		double res, c, a, m,s;
+		printonfile(res, c, a, m, s);
 	}
+		   
 };
 }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Программа AlcoDoze</h1>
+    <hr align="left" noshade="noshade" width="80%" color="black" style="margin-top: 0.5%; height: 0.5px;" />
+    <h2>Разработчик</h2>
+    <p>Программа разработана в учебных целях учащимся БГУИР Пацевичем Антоном Леонидовичем.</p>
+    <h2>О программе</h2>
+    <p>Программа предназначена для расчета концентрации алкоголя в крови. Информация о расчетах, используемых данных отражена в файле информации.</p>
+    <h2>Работа программы</h2>
+    <p>При входе в программу, открывается меню. При нажатии на кнопку Начать тест, осуществляется переход на форму с расчетами. 
+        При нажатии на кнопки Информация, Справка, открвываются соответствующие html файлы. Для начала самих расчетов необходимо заполнить поля, 
+        при наведении на поля отображается информация о вводе.</p>
+</body>
+</html>
