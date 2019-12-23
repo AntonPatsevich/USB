@@ -8,16 +8,16 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
-<body>
-    <h1>Программа AlcoDoze</h1>
-    <hr align="left" noshade="noshade" width="80%" color="black" style="margin-top: 0.5%; height: 0.5px;" />
-    <h2>Разработчик</h2>
-    <p>Программа разработана в учебных целях учащимся БГУИР Пацевичем Антоном Леонидовичем.</p>
-    <h2>О программе</h2>
-    <p>Программа предназначена для расчета концентрации алкоголя в крови. Информация о расчетах, используемых данных отражена в файле информации.</p>
-    <h2>Работа программы</h2>
-    <p>При входе в программу, открывается меню. При нажатии на кнопку Начать тест, осуществляется переход на форму с расчетами. 
+<body style="background-image: url(https://st2.depositphotos.com/2786775/7446/v/950/depositphotos_74461521-stock-illustration-bottles-and-glasses-silhouettes.jpg);">
+    <div style="background-color: #f5f5f5;  padding: 2%; margin: 10%; box-shadow: 0 0 5px 2px;"><h1 style="margin-left: 3%;">Программа AlcoDoze</h1>
+    <hr align ="left" noshade="noshade" width="80%" color="black" style="margin-top: 0.5%; margin-left: 0.5%; height: 0.5%;" />
+    <h2 style="margin-left: 3%;">Разработчик</h2>
+    <p style="text-align: justify; font-size: 16pt; margin-left: 5%;">Программа разработана в учебных целях учащимся БГУИР Пацевичем Антоном Леонидовичем.</p>
+    <h2 style="margin-left: 3%;">О программе</h2>
+    <p style="text-align: justify; font-size: 16pt; margin-left: 5%;">Программа предназначена для расчета концентрации алкоголя в крови. Информация о расчетах, используемых данных отражена в файле информации.</p>
+    <h2 style="margin-left: 3%;">Работа программы</h2>
+    <p style="text-align: justify; font-size: 16pt; margin-left: 5%;">При входе в программу, открывается меню. При нажатии на кнопку Начать тест, осуществляется переход на форму с расчетами. 
         При нажатии на кнопки Информация, Справка, открвываются соответствующие html файлы. Для начала самих расчетов необходимо заполнить поля, 
-        при наведении на поля отображается информация о вводе.</p>
+        при наведении на поля отображается информация о вводе.</p></div>
 </body>
 </html>

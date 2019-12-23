@@ -42,6 +42,7 @@ namespace AlcoDoze {
 	private: MetroFramework::Controls::MetroButton^  metroButton2;
 	private: MetroFramework::Controls::MetroButton^  metroButton3;
 	private: MetroFramework::Controls::MetroButton^  metroButton4;
+	private: MetroFramework::Controls::MetroButton^ metroButton5;
 
 	protected:
 
@@ -58,11 +59,12 @@ namespace AlcoDoze {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->metroButton1 = (gcnew MetroFramework::Controls::MetroButton());
 			this->metroButton2 = (gcnew MetroFramework::Controls::MetroButton());
 			this->metroButton3 = (gcnew MetroFramework::Controls::MetroButton());
 			this->metroButton4 = (gcnew MetroFramework::Controls::MetroButton());
+			this->metroButton5 = (gcnew MetroFramework::Controls::MetroButton());
 			this->SuspendLayout();
 			// 
 			// metroButton1
@@ -116,6 +118,20 @@ namespace AlcoDoze {
 			this->metroButton4->UseSelectable = true;
 			this->metroButton4->UseStyleColors = true;
 			// 
+			// metroButton5
+			// 
+			this->metroButton5->BackColor = System::Drawing::Color::Black;
+			this->metroButton5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"metroButton5.BackgroundImage")));
+			this->metroButton5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->metroButton5->DisplayFocus = true;
+			this->metroButton5->Location = System::Drawing::Point(90, 324);
+			this->metroButton5->Name = L"metroButton5";
+			this->metroButton5->Size = System::Drawing::Size(30, 23);
+			this->metroButton5->TabIndex = 4;
+			this->metroButton5->Theme = MetroFramework::MetroThemeStyle::Dark;
+			this->metroButton5->UseSelectable = true;
+			this->metroButton5->UseStyleColors = true;
+			// 
 			// MyForm
 			// 
 			this->ApplyImageInvert = true;
@@ -128,6 +144,7 @@ namespace AlcoDoze {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->BorderStyle = MetroFramework::Forms::MetroFormBorderStyle::FixedSingle;
 			this->ClientSize = System::Drawing::Size(450, 370);
+			this->Controls->Add(this->metroButton5);
 			this->Controls->Add(this->metroButton4);
 			this->Controls->Add(this->metroButton3);
 			this->Controls->Add(this->metroButton2);

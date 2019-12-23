@@ -11,6 +11,7 @@ namespace AlcoDoze {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace MetroFramework::Forms;
+	using namespace std;
 
 	/// <summary>
 	/// Сводка для Operations
@@ -58,6 +59,8 @@ namespace AlcoDoze {
 	private: MetroFramework::Controls::MetroTextBox^ metroTextBox1;
 	private: MetroFramework::Controls::MetroLabel^ metroLabel6;
 	private: MetroFramework::Controls::MetroButton^  metroButton2;
+	private: MetroFramework::Controls::MetroButton^ metroButton5;
+	private: MetroFramework::Controls::MetroButton^ metroButton4;
 
 
 	private: System::ComponentModel::IContainer^ components;
@@ -75,6 +78,7 @@ namespace AlcoDoze {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Operations::typeid));
 			this->metroToolTip1 = (gcnew MetroFramework::Components::MetroToolTip());
 			this->metroLabel5 = (gcnew MetroFramework::Controls::MetroLabel());
 			this->metrobutton1 = (gcnew MetroFramework::Controls::MetroButton());
@@ -88,6 +92,8 @@ namespace AlcoDoze {
 			this->metroTextBox1 = (gcnew MetroFramework::Controls::MetroTextBox());
 			this->metroLabel6 = (gcnew MetroFramework::Controls::MetroLabel());
 			this->metroButton2 = (gcnew MetroFramework::Controls::MetroButton());
+			this->metroButton5 = (gcnew MetroFramework::Controls::MetroButton());
+			this->metroButton4 = (gcnew MetroFramework::Controls::MetroButton());
 			this->SuspendLayout();
 			// 
 			// metroToolTip1
@@ -108,7 +114,7 @@ namespace AlcoDoze {
 			// metrobutton1
 			// 
 			this->metrobutton1->AllowDrop = true;
-			this->metrobutton1->Location = System::Drawing::Point(291, 263);
+			this->metrobutton1->Location = System::Drawing::Point(302, 266);
 			this->metrobutton1->Name = L"metrobutton1";
 			this->metrobutton1->Size = System::Drawing::Size(75, 23);
 			this->metrobutton1->TabIndex = 49;
@@ -120,7 +126,7 @@ namespace AlcoDoze {
 			// metroLabel4
 			// 
 			this->metroLabel4->AutoSize = true;
-			this->metroLabel4->Location = System::Drawing::Point(125, 207);
+			this->metroLabel4->Location = System::Drawing::Point(107, 222);
 			this->metroLabel4->Name = L"metroLabel4";
 			this->metroLabel4->Size = System::Drawing::Size(64, 19);
 			this->metroLabel4->TabIndex = 48;
@@ -130,7 +136,7 @@ namespace AlcoDoze {
 			// metroLabel3
 			// 
 			this->metroLabel3->AutoSize = true;
-			this->metroLabel3->Location = System::Drawing::Point(72, 168);
+			this->metroLabel3->Location = System::Drawing::Point(54, 173);
 			this->metroLabel3->Name = L"metroLabel3";
 			this->metroLabel3->Size = System::Drawing::Size(117, 19);
 			this->metroLabel3->TabIndex = 47;
@@ -140,7 +146,7 @@ namespace AlcoDoze {
 			// metroLabel2
 			// 
 			this->metroLabel2->AutoSize = true;
-			this->metroLabel2->Location = System::Drawing::Point(156, 134);
+			this->metroLabel2->Location = System::Drawing::Point(138, 139);
 			this->metroLabel2->Name = L"metroLabel2";
 			this->metroLabel2->Size = System::Drawing::Size(33, 19);
 			this->metroLabel2->TabIndex = 46;
@@ -150,7 +156,7 @@ namespace AlcoDoze {
 			// metroLabel1
 			// 
 			this->metroLabel1->AutoSize = true;
-			this->metroLabel1->Location = System::Drawing::Point(156, 84);
+			this->metroLabel1->Location = System::Drawing::Point(138, 99);
 			this->metroLabel1->Name = L"metroLabel1";
 			this->metroLabel1->Size = System::Drawing::Size(36, 19);
 			this->metroLabel1->TabIndex = 45;
@@ -167,7 +173,7 @@ namespace AlcoDoze {
 					L"Текила/Бренди (38%)", L"Ром/Джин (39%)", L"Водка/Виски/Бурбон/Коньяк/Бурбон/Скотч(40%)", L"Абсент Легкий(60%)", L"Абсент Средний(69%)",
 					L"Настойка боярышника(70%)", L"Абсент Крепкий(80%)", L"Чистый спирт(95%)"
 			});
-			this->metroComboBox2->Location = System::Drawing::Point(212, 207);
+			this->metroComboBox2->Location = System::Drawing::Point(194, 212);
 			this->metroComboBox2->Name = L"metroComboBox2";
 			this->metroComboBox2->Size = System::Drawing::Size(166, 29);
 			this->metroComboBox2->TabIndex = 44;
@@ -179,7 +185,7 @@ namespace AlcoDoze {
 			this->metroComboBox1->FormattingEnabled = true;
 			this->metroComboBox1->ItemHeight = 23;
 			this->metroComboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Мужчина", L"Женщина" });
-			this->metroComboBox1->Location = System::Drawing::Point(212, 84);
+			this->metroComboBox1->Location = System::Drawing::Point(194, 89);
 			this->metroComboBox1->Name = L"metroComboBox1";
 			this->metroComboBox1->Size = System::Drawing::Size(166, 29);
 			this->metroComboBox1->TabIndex = 43;
@@ -201,7 +207,7 @@ namespace AlcoDoze {
 			this->metroTextBox2->CustomButton->UseSelectable = true;
 			this->metroTextBox2->CustomButton->Visible = false;
 			this->metroTextBox2->Lines = gcnew cli::array< System::String^  >(1) { L"Выпито в граммах(мл.)" };
-			this->metroTextBox2->Location = System::Drawing::Point(212, 168);
+			this->metroTextBox2->Location = System::Drawing::Point(194, 173);
 			this->metroTextBox2->MaxLength = 32767;
 			this->metroTextBox2->Name = L"metroTextBox2";
 			this->metroTextBox2->PasswordChar = '\0';
@@ -234,7 +240,7 @@ namespace AlcoDoze {
 			this->metroTextBox1->CustomButton->UseSelectable = true;
 			this->metroTextBox1->CustomButton->Visible = false;
 			this->metroTextBox1->Lines = gcnew cli::array< System::String^  >(1) { L"Введите вес" };
-			this->metroTextBox1->Location = System::Drawing::Point(212, 130);
+			this->metroTextBox1->Location = System::Drawing::Point(194, 135);
 			this->metroTextBox1->MaxLength = 32767;
 			this->metroTextBox1->Name = L"metroTextBox1";
 			this->metroTextBox1->PasswordChar = '\0';
@@ -263,13 +269,42 @@ namespace AlcoDoze {
 			// 
 			// metroButton2
 			// 
-			this->metroButton2->Location = System::Drawing::Point(50, 263);
+			this->metroButton2->Location = System::Drawing::Point(81, 266);
 			this->metroButton2->Name = L"metroButton2";
 			this->metroButton2->Size = System::Drawing::Size(75, 23);
 			this->metroButton2->TabIndex = 51;
-			this->metroButton2->Text = L"metroButton2";
+			this->metroButton2->Text = L"Отчет";
+			this->metroButton2->Theme = MetroFramework::MetroThemeStyle::Dark;
 			this->metroButton2->UseSelectable = true;
 			this->metroButton2->Click += gcnew System::EventHandler(this, &Operations::metroButton2_Click);
+			// 
+			// metroButton5
+			// 
+			this->metroButton5->BackColor = System::Drawing::Color::Black;
+			this->metroButton5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"metroButton5.BackgroundImage")));
+			this->metroButton5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->metroButton5->DisplayFocus = true;
+			this->metroButton5->Location = System::Drawing::Point(90, 324);
+			this->metroButton5->Name = L"metroButton5";
+			this->metroButton5->Size = System::Drawing::Size(30, 23);
+			this->metroButton5->TabIndex = 53;
+			this->metroButton5->Theme = MetroFramework::MetroThemeStyle::Dark;
+			this->metroButton5->UseSelectable = true;
+			this->metroButton5->UseStyleColors = true;
+			// 
+			// metroButton4
+			// 
+			this->metroButton4->BackColor = System::Drawing::Color::White;
+			this->metroButton4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"metroButton4.BackgroundImage")));
+			this->metroButton4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->metroButton4->DisplayFocus = true;
+			this->metroButton4->Location = System::Drawing::Point(45, 324);
+			this->metroButton4->Name = L"metroButton4";
+			this->metroButton4->Size = System::Drawing::Size(30, 23);
+			this->metroButton4->TabIndex = 52;
+			this->metroButton4->Theme = MetroFramework::MetroThemeStyle::Dark;
+			this->metroButton4->UseSelectable = true;
+			this->metroButton4->UseStyleColors = true;
 			// 
 			// Operations
 			// 
@@ -277,6 +312,8 @@ namespace AlcoDoze {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(450, 370);
+			this->Controls->Add(this->metroButton5);
+			this->Controls->Add(this->metroButton4);
 			this->Controls->Add(this->metroButton2);
 			this->Controls->Add(this->metroLabel6);
 			this->Controls->Add(this->metrobutton1);
@@ -307,55 +344,72 @@ namespace AlcoDoze {
 #pragma endregion
 		void drunks(double* res)
 		{
+			
+			
 			switch (metroComboBox2->SelectedIndex)
 			{
 			case 0:
 				*res = 0.005;
+				
 				break;
 			case 1:
 				*res = 0.08;
+				
 				break;
 			case 2:
 				*res = 0.1;
+
 				break;
 			case 3:
 				*res = 0.12;
+		
 				break;
 			case 4:
 				*res = 0.15;
+	
 				break;
 			case 5:
 				*res = 0.17;
+				
 				break;
 			case 6:
 				*res = 0.20;
 				break;
 			case 7:
 				*res = 0.35;
+
 				break;
 			case 8:
 				*res = 0.38;
+				
 				break;
 			case 9:
 				*res = 0.39;
+				
 				break;
 			case 10:
 				*res = 0.40;
+				
 				break;
 			case 11:
 				*res = 0.60;
+				
 				break;
 			case 12:
 				*res = 0.69;
+				
 				break;
 			case 13:
 				*res = 0.70;
+				
 				break;
 			case 14:
 				*res = 0.80;
+				
 				break;
 			case 15:
 				*res = 0.95;
+				
 				break;
 			default:
 				MessageBox::Show("Выберите напиток", "Предупреждение", MessageBoxButtons::OK, MessageBoxIcon::Warning);
@@ -371,7 +425,7 @@ namespace AlcoDoze {
 			switch (metroComboBox1->SelectedIndex)
 			{
 			case 0:
-				*s = 1;
+				*s = metroComboBox1->SelectedIndex;
 				r = 0.70;
 				*m = Convert::ToDouble(metroTextBox1->Text);
 				ml = Convert::ToDouble(metroTextBox2->Text);
@@ -380,7 +434,7 @@ namespace AlcoDoze {
 				/*metroLabel6->Text = Convert::ToString(c);*/
 				break;
 			case 1:
-				*s = 0;
+				*s = metroComboBox1->SelectedIndex;
 				r = 0.60;
 				*m = Convert::ToDouble(metroTextBox1->Text);
 				ml = Convert::ToDouble(metroTextBox2->Text);
@@ -406,7 +460,7 @@ namespace AlcoDoze {
 			out.open("D:\\Report.doc"); 
 			if (out.is_open())
 			{
-				if (s == 1) {
+				if (s == 0) {
 					out << "Пол:" << b_sex << std::endl;
 				}
 				else {
@@ -437,6 +491,7 @@ namespace AlcoDoze {
 
 	private: System::Void metroButton2_Click(System::Object^  sender, System::EventArgs^  e) {
 		double res, c, a, m,s;
+	
 		printonfile(res, c, a, m, s);
 	}
 		   
