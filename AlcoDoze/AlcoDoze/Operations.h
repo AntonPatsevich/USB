@@ -12,6 +12,8 @@ namespace AlcoDoze {
 	using namespace System::Drawing;
 	using namespace MetroFramework::Forms;
 	using namespace std;
+	using namespace System::IO;
+	using namespace System::Diagnostics;
 
 	/// <summary>
 	/// Сводка для Operations
@@ -107,15 +109,16 @@ namespace AlcoDoze {
 			// 
 			// metroComboBox1
 			// 
+			this->metroComboBox1->BackColor = System::Drawing::Color::Black;
 			this->metroComboBox1->FormattingEnabled = true;
 			this->metroComboBox1->ItemHeight = 23;
 			this->metroComboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Мужчина", L"Женщина" });
 			this->metroComboBox1->Location = System::Drawing::Point(194, 89);
 			this->metroComboBox1->Name = L"metroComboBox1";
-			this->metroComboBox1->Size = System::Drawing::Size(166, 29);
+			this->metroComboBox1->Size = System::Drawing::Size(183, 29);
 			this->metroComboBox1->TabIndex = 43;
 			this->metroComboBox1->Theme = MetroFramework::MetroThemeStyle::Dark;
-			this->metroToolTip1->SetToolTip(this->metroComboBox1, L"Выберите Пол");
+			this->metroToolTip1->SetToolTip(this->metroComboBox1, L"Выберите пол");
 			this->metroComboBox1->UseSelectable = true;
 			// 
 			// metroLabel5
@@ -181,6 +184,7 @@ namespace AlcoDoze {
 			// 
 			// metroComboBox2
 			// 
+			this->metroComboBox2->BackColor = System::Drawing::Color::Black;
 			this->metroComboBox2->FormattingEnabled = true;
 			this->metroComboBox2->ItemHeight = 23;
 			this->metroComboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(16) {
@@ -191,7 +195,7 @@ namespace AlcoDoze {
 			});
 			this->metroComboBox2->Location = System::Drawing::Point(194, 212);
 			this->metroComboBox2->Name = L"metroComboBox2";
-			this->metroComboBox2->Size = System::Drawing::Size(166, 29);
+			this->metroComboBox2->Size = System::Drawing::Size(183, 29);
 			this->metroComboBox2->TabIndex = 44;
 			this->metroComboBox2->Theme = MetroFramework::MetroThemeStyle::Dark;
 			this->metroComboBox2->UseSelectable = true;
@@ -202,7 +206,7 @@ namespace AlcoDoze {
 			// 
 			// 
 			this->metroTextBox2->CustomButton->Image = nullptr;
-			this->metroTextBox2->CustomButton->Location = System::Drawing::Point(144, 1);
+			this->metroTextBox2->CustomButton->Location = System::Drawing::Point(161, 1);
 			this->metroTextBox2->CustomButton->Name = L"";
 			this->metroTextBox2->CustomButton->Size = System::Drawing::Size(21, 21);
 			this->metroTextBox2->CustomButton->Style = MetroFramework::MetroColorStyle::Blue;
@@ -220,7 +224,7 @@ namespace AlcoDoze {
 			this->metroTextBox2->SelectionLength = 0;
 			this->metroTextBox2->SelectionStart = 0;
 			this->metroTextBox2->ShortcutsEnabled = true;
-			this->metroTextBox2->Size = System::Drawing::Size(166, 23);
+			this->metroTextBox2->Size = System::Drawing::Size(183, 23);
 			this->metroTextBox2->TabIndex = 42;
 			this->metroTextBox2->Theme = MetroFramework::MetroThemeStyle::Dark;
 			this->metroToolTip2->SetToolTip(this->metroTextBox2, L"Введите количество выпитого в (мл.)");
@@ -236,7 +240,7 @@ namespace AlcoDoze {
 			// 
 			// 
 			this->metroTextBox1->CustomButton->Image = nullptr;
-			this->metroTextBox1->CustomButton->Location = System::Drawing::Point(144, 1);
+			this->metroTextBox1->CustomButton->Location = System::Drawing::Point(161, 1);
 			this->metroTextBox1->CustomButton->Name = L"";
 			this->metroTextBox1->CustomButton->Size = System::Drawing::Size(21, 21);
 			this->metroTextBox1->CustomButton->Style = MetroFramework::MetroColorStyle::Blue;
@@ -254,7 +258,7 @@ namespace AlcoDoze {
 			this->metroTextBox1->SelectionLength = 0;
 			this->metroTextBox1->SelectionStart = 0;
 			this->metroTextBox1->ShortcutsEnabled = true;
-			this->metroTextBox1->Size = System::Drawing::Size(166, 23);
+			this->metroTextBox1->Size = System::Drawing::Size(183, 23);
 			this->metroTextBox1->TabIndex = 41;
 			this->metroTextBox1->Theme = MetroFramework::MetroThemeStyle::Dark;
 			this->metroToolTip2->SetToolTip(this->metroTextBox1, L"Ввведите вес");
@@ -298,6 +302,7 @@ namespace AlcoDoze {
 			this->metroButton5->Theme = MetroFramework::MetroThemeStyle::Dark;
 			this->metroButton5->UseSelectable = true;
 			this->metroButton5->UseStyleColors = true;
+			this->metroButton5->Click += gcnew System::EventHandler(this, &Operations::metroButton5_Click);
 			// 
 			// metroButton4
 			// 
@@ -341,11 +346,11 @@ namespace AlcoDoze {
 			this->Controls->Add(this->metroLabel5);
 			this->Cursor = System::Windows::Forms::Cursors::Default;
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximumSize = System::Drawing::Size(450, 370);
 			this->MinimumSize = System::Drawing::Size(450, 370);
 			this->Name = L"Operations";
 			this->Padding = System::Windows::Forms::Padding(0, 60, 0, 0);
-			this->ShowIcon = false;
 			this->Text = L"AlcoDoze | Operations";
 			this->Theme = MetroFramework::MetroThemeStyle::Dark;
 			this->Load += gcnew System::EventHandler(this, &Operations::Operations_Load);
@@ -577,6 +582,9 @@ private: System::Void metroToolTip1_Popup(System::Object^ sender, System::Window
 private: System::Void metroTextBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 
 	//metrobutton1->Enabled = metroTextBox1->Text = ;
+}
+private: System::Void metroButton5_Click(System::Object^ sender, System::EventArgs^ e) {
+	Process::Start("Help.Html");
 }
 };
 }

@@ -10,6 +10,8 @@ namespace AlcoDoze {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace MetroFramework::Forms;
+	using namespace System::IO;
+	using namespace System::Diagnostics;
 
 
 	/// <summary>
@@ -105,6 +107,7 @@ namespace AlcoDoze {
 			this->metroButton3->Text = L"Справка";
 			this->metroButton3->Theme = MetroFramework::MetroThemeStyle::Dark;
 			this->metroButton3->UseSelectable = true;
+			this->metroButton3->Click += gcnew System::EventHandler(this, &MyForm::metroButton3_Click);
 			// 
 			// metroButton4
 			// 
@@ -133,6 +136,7 @@ namespace AlcoDoze {
 			this->metroButton5->Theme = MetroFramework::MetroThemeStyle::Dark;
 			this->metroButton5->UseSelectable = true;
 			this->metroButton5->UseStyleColors = true;
+			this->metroButton5->Click += gcnew System::EventHandler(this, &MyForm::metroButton5_Click);
 			// 
 			// metroButton6
 			// 
@@ -164,6 +168,7 @@ namespace AlcoDoze {
 			this->Controls->Add(this->metroButton3);
 			this->Controls->Add(this->metroButton2);
 			this->Controls->Add(this->metroButton1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximumSize = System::Drawing::Size(450, 370);
 			this->MinimumSize = System::Drawing::Size(450, 370);
 			this->Name = L"MyForm";
@@ -184,6 +189,13 @@ namespace AlcoDoze {
 	private: System::Void metroButton6_Click(System::Object^ sender, System::EventArgs^ e) {
 		Application::Exit();
 	}
+private: System::Void metroButton3_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	Process::Start("Help.Html");
+}
+private: System::Void metroButton5_Click(System::Object^ sender, System::EventArgs^ e) {
+	Process::Start("Help.Html");
+}
 };
 
 }
