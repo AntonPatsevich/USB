@@ -559,7 +559,7 @@ private: System::Void metroTextBox2_KeyPress(System::Object^ sender, System::Win
 	{
 	
 		e->KeyChar = ',';
-		if (metroTextBox1->Text->IndexOf(',') != -1)
+		if (metroTextBox2->Text->IndexOf(',') != -1)
 		{
 			e->Handled = true;
 			return;

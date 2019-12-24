@@ -43,6 +43,7 @@ namespace AlcoDoze {
 	private: MetroFramework::Controls::MetroButton^  metroButton3;
 	private: MetroFramework::Controls::MetroButton^  metroButton4;
 	private: MetroFramework::Controls::MetroButton^ metroButton5;
+	private: MetroFramework::Controls::MetroButton^ metroButton6;
 
 	protected:
 
@@ -65,6 +66,7 @@ namespace AlcoDoze {
 			this->metroButton3 = (gcnew MetroFramework::Controls::MetroButton());
 			this->metroButton4 = (gcnew MetroFramework::Controls::MetroButton());
 			this->metroButton5 = (gcnew MetroFramework::Controls::MetroButton());
+			this->metroButton6 = (gcnew MetroFramework::Controls::MetroButton());
 			this->SuspendLayout();
 			// 
 			// metroButton1
@@ -72,7 +74,7 @@ namespace AlcoDoze {
 			this->metroButton1->AutoSize = true;
 			this->metroButton1->DialogResult = System::Windows::Forms::DialogResult::Cancel;
 			this->metroButton1->Highlight = true;
-			this->metroButton1->Location = System::Drawing::Point(165, 122);
+			this->metroButton1->Location = System::Drawing::Point(166, 92);
 			this->metroButton1->Name = L"metroButton1";
 			this->metroButton1->Size = System::Drawing::Size(118, 32);
 			this->metroButton1->TabIndex = 0;
@@ -85,7 +87,7 @@ namespace AlcoDoze {
 			// 
 			this->metroButton2->DialogResult = System::Windows::Forms::DialogResult::Cancel;
 			this->metroButton2->Highlight = true;
-			this->metroButton2->Location = System::Drawing::Point(165, 172);
+			this->metroButton2->Location = System::Drawing::Point(166, 142);
 			this->metroButton2->Name = L"metroButton2";
 			this->metroButton2->Size = System::Drawing::Size(118, 32);
 			this->metroButton2->TabIndex = 1;
@@ -96,7 +98,7 @@ namespace AlcoDoze {
 			// metroButton3
 			// 
 			this->metroButton3->Highlight = true;
-			this->metroButton3->Location = System::Drawing::Point(165, 225);
+			this->metroButton3->Location = System::Drawing::Point(166, 195);
 			this->metroButton3->Name = L"metroButton3";
 			this->metroButton3->Size = System::Drawing::Size(118, 32);
 			this->metroButton3->TabIndex = 2;
@@ -132,6 +134,18 @@ namespace AlcoDoze {
 			this->metroButton5->UseSelectable = true;
 			this->metroButton5->UseStyleColors = true;
 			// 
+			// metroButton6
+			// 
+			this->metroButton6->Highlight = true;
+			this->metroButton6->Location = System::Drawing::Point(166, 247);
+			this->metroButton6->Name = L"metroButton6";
+			this->metroButton6->Size = System::Drawing::Size(118, 32);
+			this->metroButton6->TabIndex = 5;
+			this->metroButton6->Text = L"Выход";
+			this->metroButton6->Theme = MetroFramework::MetroThemeStyle::Dark;
+			this->metroButton6->UseSelectable = true;
+			this->metroButton6->Click += gcnew System::EventHandler(this, &MyForm::metroButton6_Click);
+			// 
 			// MyForm
 			// 
 			this->ApplyImageInvert = true;
@@ -144,6 +158,7 @@ namespace AlcoDoze {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->BorderStyle = MetroFramework::Forms::MetroFormBorderStyle::FixedSingle;
 			this->ClientSize = System::Drawing::Size(450, 370);
+			this->Controls->Add(this->metroButton6);
 			this->Controls->Add(this->metroButton5);
 			this->Controls->Add(this->metroButton4);
 			this->Controls->Add(this->metroButton3);
@@ -166,6 +181,9 @@ namespace AlcoDoze {
 		Form^ f1 = gcnew Operations;
 		f1->Show();
 	}
-	};
+	private: System::Void metroButton6_Click(System::Object^ sender, System::EventArgs^ e) {
+		Application::Exit();
+	}
+};
 
 }
