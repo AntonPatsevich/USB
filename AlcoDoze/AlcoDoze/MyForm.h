@@ -96,6 +96,7 @@ namespace AlcoDoze {
 			this->metroButton2->Text = L"Информация";
 			this->metroButton2->Theme = MetroFramework::MetroThemeStyle::Dark;
 			this->metroButton2->UseSelectable = true;
+			this->metroButton2->Click += gcnew System::EventHandler(this, &MyForm::metroButton2_Click);
 			// 
 			// metroButton3
 			// 
@@ -122,6 +123,7 @@ namespace AlcoDoze {
 			this->metroButton4->Theme = MetroFramework::MetroThemeStyle::Dark;
 			this->metroButton4->UseSelectable = true;
 			this->metroButton4->UseStyleColors = true;
+			this->metroButton4->Click += gcnew System::EventHandler(this, &MyForm::metroButton4_Click);
 			// 
 			// metroButton5
 			// 
@@ -195,6 +197,12 @@ private: System::Void metroButton3_Click(System::Object^ sender, System::EventAr
 }
 private: System::Void metroButton5_Click(System::Object^ sender, System::EventArgs^ e) {
 	Process::Start("Help.Html");
+}
+private: System::Void metroButton2_Click(System::Object^ sender, System::EventArgs^ e) {
+	Process::Start("Info.Html");
+}
+private: System::Void metroButton4_Click(System::Object^ sender, System::EventArgs^ e) {
+	Process::Start("Info.Html");
 }
 };
 

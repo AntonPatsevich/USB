@@ -317,6 +317,7 @@ namespace AlcoDoze {
 			this->metroButton4->Theme = MetroFramework::MetroThemeStyle::Dark;
 			this->metroButton4->UseSelectable = true;
 			this->metroButton4->UseStyleColors = true;
+			this->metroButton4->Click += gcnew System::EventHandler(this, &Operations::metroButton4_Click);
 			// 
 			// metroToolTip2
 			// 
@@ -585,6 +586,9 @@ private: System::Void metroTextBox1_TextChanged(System::Object^ sender, System::
 }
 private: System::Void metroButton5_Click(System::Object^ sender, System::EventArgs^ e) {
 	Process::Start("Help.Html");
+}
+private: System::Void metroButton4_Click(System::Object^ sender, System::EventArgs^ e) {
+	Process::Start("Info.Html");
 }
 };
 }
