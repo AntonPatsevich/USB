@@ -1,0 +1,19 @@
+﻿  MyForm.cpp
+C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\MyForm.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\MyForm.cpp(6,32): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
+  Operations.cpp
+  Создание кода...
+C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(523): warning C4700: использована неинициализированная локальная переменная "res"
+C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(532): warning C4700: использована неинициализированная локальная переменная "s"
+C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(532): warning C4700: использована неинициализированная локальная переменная "m"
+C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(532): warning C4700: использована неинициализированная локальная переменная "a"
+C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(532): warning C4700: использована неинициализированная локальная переменная "c"
+C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(532): warning C4700: использована неинициализированная локальная переменная "res"
+C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(523): warning C4700: использована неинициализированная локальная переменная "res"
+C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(532): warning C4700: использована неинициализированная локальная переменная "s"
+C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(532): warning C4700: использована неинициализированная локальная переменная "m"
+C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(532): warning C4700: использована неинициализированная локальная переменная "a"
+C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(532): warning C4700: использована неинициализированная локальная переменная "c"
+C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(532): warning C4700: использована неинициализированная локальная переменная "res"
+  .NETFramework,Version=v4.7.1.AssemblyAttributes.cpp
+  AlcoDoze.vcxproj -> C:\Users\Антон\Documents\USB\AlcoDoze\x64\Release\AlcoDoze.exe

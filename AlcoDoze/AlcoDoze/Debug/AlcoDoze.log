@@ -15,5 +15,6 @@ C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(532): warning C
 C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(532): warning C4700: использована неинициализированная локальная переменная "a"
 C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(532): warning C4700: использована неинициализированная локальная переменная "c"
 C:\Users\Антон\Documents\USB\AlcoDoze\AlcoDoze\Operations.h(532): warning C4700: использована неинициализированная локальная переменная "res"
+  .NETFramework,Version=v4.7.1.AssemblyAttributes.cpp
   MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
   AlcoDoze.vcxproj -> C:\Users\Антон\Documents\USB\AlcoDoze\Debug\AlcoDoze.exe
