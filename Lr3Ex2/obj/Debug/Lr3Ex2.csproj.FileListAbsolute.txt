@@ -1,0 +1,6 @@
+C:\Users\paca\Desktop\ConsoleApplication3\Lr3Ex2\bin\Debug\Lr3Ex2.exe.config
+C:\Users\paca\Desktop\ConsoleApplication3\Lr3Ex2\bin\Debug\Lr3Ex2.exe
+C:\Users\paca\Desktop\ConsoleApplication3\Lr3Ex2\bin\Debug\Lr3Ex2.pdb
+C:\Users\paca\Desktop\ConsoleApplication3\Lr3Ex2\obj\Debug\Lr3Ex2.csprojAssemblyReference.cache
+C:\Users\paca\Desktop\ConsoleApplication3\Lr3Ex2\obj\Debug\Lr3Ex2.exe
+C:\Users\paca\Desktop\ConsoleApplication3\Lr3Ex2\obj\Debug\Lr3Ex2.pdb
